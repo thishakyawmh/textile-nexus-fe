@@ -15,14 +15,14 @@ export default function Signup({ onNavigate }) {
     };
 
     return (
-        <AuthLayout>
-            <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border dark:border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl animate-fade-in-up w-[600px] max-w-[90vw] transition-colors">
+        <AuthLayout onNavigate={onNavigate}>
+            <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border dark:border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-2xl animate-fade-in-up w-full sm:w-[600px] max-w-[95vw] sm:max-w-[90vw] transition-colors">
                 {/* Adjusted width/margin to fit larger form if needed, or stick to default layout constraint */}
                 {/* Re-using default layout constraint but overriding specific styles if needed. Layout uses max-w-[500px] which might be tight for 2 cols. */}
                 {/* Let's keep it single column for mobile, maybe grid for desktop inside the card. */}
 
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Sign up</h2>
-                <p className="text-neutral-500 dark:text-neutral-400 mb-8 text-sm">Let's get you all set up so you can access your personal account.</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-1 sm:mb-2">Sign up</h2>
+                <p className="text-neutral-500 dark:text-neutral-400 mb-6 sm:mb-8 text-xs sm:text-sm">Let's get you all set up so you can access your personal account.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <FloatingLabelInput label="First Name" />

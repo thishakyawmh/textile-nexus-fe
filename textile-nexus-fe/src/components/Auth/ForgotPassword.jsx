@@ -4,17 +4,19 @@ import AuthLayout, { FloatingLabelInput } from './AuthLayout';
 
 export default function ForgotPassword({ onNavigate }) {
     return (
-        <AuthLayout>
-            <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border dark:border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl animate-fade-in-up transition-colors">
+        <AuthLayout onNavigate={onNavigate}>
+            <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border dark:border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl animate-fade-in-up transition-colors">
                 <button
                     onClick={() => onNavigate('login')}
-                    className="flex items-center gap-2 text-xs font-semibold text-neutral-500 dark:text-neutral-400 mb-6 hover:text-black dark:hover:text-white transition-colors"
+                    className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-semibold text-neutral-500 dark:text-neutral-400 mb-4 sm:mb-6 hover:text-black dark:hover:text-white transition-colors"
                 >
-                    <ChevronLeft size={16} /> Back to login
+                    <ChevronLeft size={14} className="sm:hidden" />
+                    <ChevronLeft size={16} className="hidden sm:block" />
+                    Back to login
                 </button>
 
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Forgot password?</h2>
-                <p className="text-neutral-500 dark:text-neutral-400 mb-8 text-sm">Don't worry! It happens. Please enter the email associated with your account.</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-1 sm:mb-2">Forgot password?</h2>
+                <p className="text-neutral-500 dark:text-neutral-400 mb-6 sm:mb-8 text-xs sm:text-sm">Don't worry! It happens. Please enter the email associated with your account.</p>
 
                 <div className="space-y-6">
                     <FloatingLabelInput

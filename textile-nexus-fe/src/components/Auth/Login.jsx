@@ -32,10 +32,10 @@ export default function Login({ onNavigate, onLogin }) {
     };
 
     return (
-        <AuthLayout>
-            <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border dark:border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl animate-fade-in-up transition-colors">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Login</h2>
-                <p className="text-neutral-500 dark:text-neutral-400 mb-8 text-sm">Login to access your Textile Nexus account</p>
+        <AuthLayout onNavigate={onNavigate}>
+            <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border dark:border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl animate-fade-in-up transition-colors">
+                <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-1 sm:mb-2">Login</h2>
+                <p className="text-neutral-500 dark:text-neutral-400 mb-6 sm:mb-8 text-xs sm:text-sm">Login to access your Textile Nexus account</p>
 
                 <div className="space-y-5">
                     <FloatingLabelInput
