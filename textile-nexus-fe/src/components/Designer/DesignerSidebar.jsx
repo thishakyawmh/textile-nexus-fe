@@ -20,7 +20,6 @@ const MENU_ITEMS = [
     { id: 'community-hub', label: 'Community Hub', icon: BarChart2 },
     { id: 'order', label: 'Order', icon: ShoppingCart },
     { id: 'products', label: 'Products', icon: ShoppingBag },
-    { id: 'product-upload', label: 'Upload Design', icon: Upload },
     { id: 'profile', label: 'Profile', icon: User },
     { id: 'messages', label: 'Messages', icon: MessageSquare },
     { id: 'settings', label: 'Settings', icon: Settings },

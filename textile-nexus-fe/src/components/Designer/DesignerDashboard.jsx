@@ -161,7 +161,7 @@ export default function DesignerDashboard({ onNavigate }) {
                             <p className="text-sm font-bold text-neutral-800 dark:text-neutral-300">Today's Sales</p>
                             <p className="text-xs text-neutral-400">Sales Summery</p>
                         </div>
-                        <button className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-lg text-sm font-semibold text-neutral-600 hover:bg-neutral-50 transition-colors">
+                        <button className="flex items-center gap-2 px-4 py-2 border border-neutral-200 dark:border-neutral-700 rounded-lg text-sm font-semibold text-neutral-600 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors">
                             <Download size={16} /> Export
                         </button>
                     </div>
@@ -224,13 +224,13 @@ export default function DesignerDashboard({ onNavigate }) {
                                 </ResponsiveContainer>
                             </div>
                             <div className="flex items-center justify-center gap-6 mt-4">
-                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600">
+                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600 dark:text-neutral-400">
                                     <div className="w-3 h-3 bg-violet-500 rounded"></div> Loyal Customers
                                 </div>
-                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600">
+                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600 dark:text-neutral-400">
                                     <div className="w-3 h-3 bg-red-500 rounded"></div> New Customers
                                 </div>
-                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600">
+                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600 dark:text-neutral-400">
                                     <div className="w-3 h-3 bg-emerald-500 rounded"></div> Unique Customers
                                 </div>
                             </div>
@@ -252,10 +252,10 @@ export default function DesignerDashboard({ onNavigate }) {
                                 </ResponsiveContainer>
                             </div>
                             <div className="flex items-center justify-center gap-6 mt-4">
-                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600">
+                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600 dark:text-neutral-400">
                                     <div className="w-2 h-2 rounded-full bg-sky-500"></div> Online Sales
                                 </div>
-                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600">
+                                <div className="flex items-center gap-2 text-xs font-bold text-neutral-600 dark:text-neutral-400">
                                     <div className="w-2 h-2 rounded-full bg-emerald-500"></div> Offline Sales
                                 </div>
                             </div>
@@ -300,11 +300,11 @@ export default function DesignerDashboard({ onNavigate }) {
 
                             <div className="space-y-6">
                                 {POPULAR_DESIGNS.map((item) => (
-                                    <div key={item.id} className="flex items-center text-sm font-medium text-neutral-600 px-2 group hover:bg-neutral-50 p-2 rounded-lg transition-colors">
+                                    <div key={item.id} className="flex items-center text-sm font-medium text-neutral-600 dark:text-neutral-400 px-2 group hover:bg-neutral-50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors">
                                         <span className="w-8 text-xs">{item.id}</span>
                                         <span className="flex-1 font-bold text-neutral-800 dark:text-neutral-200">{item.name}</span>
                                         <div className="w-32 pr-4">
-                                            <div className="h-1 bg-neutral-100 rounded-full overflow-hidden">
+                                            <div className="h-1 bg-neutral-100 dark:bg-neutral-700 rounded-full overflow-hidden">
                                                 <div
                                                     className={`h-full rounded-full ${item.id === '01' ? 'bg-sky-500' :
                                                         item.id === '02' ? 'bg-emerald-400' :
