@@ -1,0 +1,207 @@
+
+> textile-nexus-fe@0.0.0 lint
+> eslint .
+
+
+D:\Textile Nexus\textile-nexus-fe\src\App.jsx
+  274:27  error  'Component' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Admin\AdminDashboard.jsx
+  124:69  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Admin\AdminLeaderboard.jsx
+  22:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                          no-unused-vars
+  93:28  error  'setSelectedPeriod' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Admin\AdminSalesReport.jsx
+  10:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u               no-unused-vars
+  25:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Admin\AdminSettings.jsx
+  11:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u               no-unused-vars
+  24:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Admin\AdminSidebar.jsx
+  14:30  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Admin\AdminUserControls.jsx
+  12:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u               no-unused-vars
+  34:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Auth\ProfileCreation.jsx
+   4:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+  33:25  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  31 |     useEffect(() => {
+  32 |         const storedRole = localStorage.getItem('userRole');
+> 33 |         if (storedRole) setRole(storedRole);
+     |                         ^^^^^^^ Avoid calling setState() directly within an effect
+  34 |     }, []);
+  35 |
+  36 |     const extraFields = ROLE_FIELDS[role] || ROLE_FIELDS['Factory'];  react-hooks/set-state-in-effect
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Customer\CustomerCommunityHub.jsx
+  95:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Customer\CustomerOrderTracking.jsx
+   14:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u     no-unused-vars
+  117:43  error  'isCurrent' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Customer\CustomerQRScanner.jsx
+  93:51  error  'index' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Customer\CustomerSettings.jsx
+  14:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Designer\DesignerCommunityHub.jsx
+  99:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Designer\DesignerDashboard.jsx
+  75:44  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Designer\DesignerOrders.jsx
+  240:61  error  'index' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\FabricSuppliers\SupplierDashboard.jsx
+  61:69  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\FabricSuppliers\SupplierFabricMarket.jsx
+   12:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  171:67  error  'index' is defined but never used                                          no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\FabricSuppliers\SupplierOrders.jsx
+   52:22  error  'setCalMonth' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  327:62  error  'index' is defined but never used                                                            no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\FabricSuppliers\SupplierSettings.jsx
+  9:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\FabricSuppliers\SupplierSidebar.jsx
+  15:30  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Factory\FactoryAICapacityPlanner.jsx
+  21:10  error  'cn' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Factory\FactoryFabricStock.jsx
+  173:67  error  'index' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Factory\FactoryOrders.jsx
+  212:61  error  'index' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\LandingPage.jsx
+  117:30  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Tailor\TailorCommunityHub.jsx
+  201:124  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  199 |                                         <div className="flex-1 h-8 flex items-center gap-0.5">
+  200 |                                             {[...Array(30)].map((_, i) => (
+> 201 |                                                 <div key={i} className="w-1 bg-slate-500 rounded-full" style={{ height: `${Math.random() * 10 + 5}px`, opacity: i < 10 ? 1 : 0.5 }}></div>
+      |                                                                                                                            ^^^^^^^^^^^^^ Cannot call impure function
+  202 |                                             ))}
+  203 |                                         </div>
+  204 |                                         <span className="text-xs font-mono">0:09</span>  react-hooks/purity
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Tailor\TailorOrders.jsx
+   55:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+  245:51  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  243 |                                     Delivery Deadline <ChevronDown size={14} />
+  244 |                                 </button>
+> 245 |                                 {showCalendar && <CalendarPopover />}
+      |                                                   ^^^^^^^^^^^^^^^ This component is created during render
+  246 |                             </div>
+  247 |
+  248 |                             {/* Garment Type Dropdown */}
+
+   60 |
+   61 |     // Simple Calendar Component
+>  62 |     const CalendarPopover = () => (
+      |                             ^^^^^^^
+>  63 |         <div className="absolute top-full left-0 mt-2 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-100 dark:border-slate-800 p-4 w-72 z-50 animate-in fade-in zoom-in-95 transition-colors">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  64 |             <div className="flex items-center justify-between mb-4">
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  96 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  97 |     );
+      | ^^^^^^ The component is created during render here
+   98 |
+   99 |     const GarmentTypePopover = () => (
+  100 |         <div className="absolute top-full left-0 mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-6 w-[400px] z-50 animate-in fade-in zoom-in-95 transition-colors">                                                   react-hooks/static-components
+  256:54  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  254 |                                     Garmant Type <ChevronDown size={14} />
+  255 |                                 </button>
+> 256 |                                 {showGarmentType && <GarmentTypePopover />}
+      |                                                      ^^^^^^^^^^^^^^^^^^ This component is created during render
+  257 |                             </div>
+  258 |
+  259 |                             {/* Order Status Dropdown */}
+
+   97 |     );
+   98 |
+>  99 |     const GarmentTypePopover = () => (
+      |                                ^^^^^^^
+> 100 |         <div className="absolute top-full left-0 mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-6 w-[400px] z-50 animate-in fade-in zoom-in-95 transition-colors">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 101 |             <h3 className="font-bold text-sm text-slate-900 dark:text-white mb-4">Select Garmant Type</h3>
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 121 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 122 |     );
+      | ^^^^^^ The component is created during render here
+  123 |
+  124 |     const OrderStatusPopover = () => (
+  125 |         <div className="absolute top-full left-0 mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-6 w-[400px] z-50 animate-in fade-in zoom-in-95 transition-colors">  react-hooks/static-components
+  267:54  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  265 |                                     Order Status <ChevronDown size={14} />
+  266 |                                 </button>
+> 267 |                                 {showOrderStatus && <OrderStatusPopover />}
+      |                                                      ^^^^^^^^^^^^^^^^^^ This component is created during render
+  268 |                             </div>
+  269 |
+  270 |                             <button className="flex items-center gap-2 px-4 py-2 text-rose-500 font-bold text-xs hover:bg-rose-50 rounded-lg ml-auto">
+
+  122 |     );
+  123 |
+> 124 |     const OrderStatusPopover = () => (
+      |                                ^^^^^^^
+> 125 |         <div className="absolute top-full left-0 mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-6 w-[400px] z-50 animate-in fade-in zoom-in-95 transition-colors">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 126 |             <h3 className="font-bold text-sm text-slate-900 dark:text-white mb-4">Select Order Status</h3>
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 146 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 147 |     );
+      | ^^^^^^ The component is created during render here
+  148 |
+  149 |     return (
+  150 |         <div className="min-h-screen bg-[#fff] dark:bg-black flex font-sans text-slate-900 dark:text-white transition-colors duration-300">             react-hooks/static-components
+
+D:\Textile Nexus\textile-nexus-fe\src\components\Tailor\TailorSettings.jsx
+  14:11  error  'isDark' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Textile Nexus\textile-nexus-fe\src\context\ThemeContext.jsx
+  45:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+✖ 39 problems (39 errors, 0 warnings)
+
