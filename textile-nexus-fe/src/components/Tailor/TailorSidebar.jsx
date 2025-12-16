@@ -28,8 +28,8 @@ const MENU_ITEMS = [
 export default function TailorSidebar({ activePage, sidebarOpen, setSidebarOpen, onNavigate }) {
     return (
         <aside className={cn(
-            "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-100 dark:border-white/10 transition-transform duration-300 ease-in-out lg:relative lg:tranneutral-x-0 flex flex-col font-sans",
-            sidebarOpen ? 'tranneutral-x-0' : '-tranneutral-x-full'
+            "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-100 dark:border-white/10 transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 flex flex-col font-sans",
+            sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         )}>
             {/* Logo */}
             <div className="h-20 flex items-center px-6 border-b border-neutral-50 dark:border-white/10 gap-3">

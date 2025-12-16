@@ -116,7 +116,7 @@ export default function FactoryQRGenerator({ onNavigate }) {
                                         className={`w-12 h-6 rounded-full p-1 cursor-pointer transition-colors ${approvalRequired ? 'bg-black dark:bg-blue-600' : 'bg-neutral-200 dark:bg-neutral-700'}`}
                                         onClick={() => setApprovalRequired(!approvalRequired)}
                                     >
-                                        <div className={`w-4 h-4 rounded-full bg-white shadow-sm transform transition-transform ${approvalRequired ? 'tranneutral-x-6' : 'tranneutral-x-0'}`}></div>
+                                        <div className={`w-4 h-4 rounded-full bg-white shadow-sm transform transition-transform ${approvalRequired ? 'translate-x-6' : 'translate-x-0'}`}></div>
                                     </div>
                                 </div>
 

@@ -38,8 +38,8 @@ export default function DesignerSidebar({ activePage = 'dashboard', sidebarOpen,
     return (
         <>
             <aside className={cn(
-                "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-100 dark:border-white/10 transform transition-transform duration-300 lg:relative lg:tranneutral-x-0 h-screen flex flex-col justify-between",
-                sidebarOpen ? "tranneutral-x-0" : "-tranneutral-x-full"
+                "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-100 dark:border-white/10 transform transition-transform duration-300 lg:relative lg:translate-x-0 h-screen flex flex-col justify-between",
+                sidebarOpen ? "translate-x-0" : "-translate-x-full"
             )}>
                 <div>
                     {/* Logo Area */}

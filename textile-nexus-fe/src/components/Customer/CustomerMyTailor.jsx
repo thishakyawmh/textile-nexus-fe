@@ -123,7 +123,7 @@ export default function CustomerMyTailor({ onNavigate }) {
                             <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-6">Recent History</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {HISTORY_TAILORS.map((tailor) => (
-                                    <div key={tailor.id} className="bg-white dark:bg-white/5 p-5 rounded-[2rem] border border-neutral-100 dark:border-white/10 shadow-sm flex flex-col items-center text-center hover:shadow-lg transition-all hover:-tranneutral-y-1">
+                                    <div key={tailor.id} className="bg-white dark:bg-white/5 p-5 rounded-[2rem] border border-neutral-100 dark:border-white/10 shadow-sm flex flex-col items-center text-center hover:shadow-lg transition-all hover:-translate-y-1">
                                         <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-neutral-100 dark:border-white/10 shadow-sm p-0.5 bg-white dark:bg-neutral-800">
                                             <img src={tailor.img} alt={tailor.name} className="w-full h-full object-cover rounded-full" />
                                         </div>

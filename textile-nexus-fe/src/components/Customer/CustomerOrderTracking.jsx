@@ -109,7 +109,7 @@ export default function CustomerOrderTracking({ onNavigate }) {
 
                             <div className="flex items-start justify-between relative max-w-4xl pr-20">
                                 {/* Connector Line */}
-                                <div className="absolute top-1/2 left-0 w-[85%] h-0.5 bg-[#4F80FF] -z-10 -tranneutral-y-1/2"></div>
+                                <div className="absolute top-1/2 left-0 w-[85%] h-0.5 bg-[#4F80FF] -z-10 -translate-y-1/2"></div>
 
                                 {/* Steps */}
                                 {steps.map((step, index) => {
@@ -129,7 +129,7 @@ export default function CustomerOrderTracking({ onNavigate }) {
                                 })}
 
                                 {/* Delivery Scooter Illustration */}
-                                <div className="absolute -right-4 top-1/2 -tranneutral-y-1/2">
+                                <div className="absolute -right-4 top-1/2 -translate-y-1/2">
                                     <img src="" alt="img" className="h-24 object-contain" onError={(e) => { e.target.style.display = 'none'; /* Fallback if no image */ }} />
                                     {/* Fallback Text if Image Fails */}
                                     <div className="text-orange-500 font-bold italic text-xl">Delivery</div>

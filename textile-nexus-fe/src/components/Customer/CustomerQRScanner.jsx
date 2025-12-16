@@ -93,7 +93,7 @@ export default function CustomerQRScanner({ onNavigate }) {
                         {SCANNED_ITEMS.map((item, index) => (
                             <div key={item.id} className="flex flex-col items-center group">
                                 {/* Image Area - Floating above */}
-                                <div className="w-[280px] h-[340px] mb-[-4rem] z-10 relative transition-transform duration-300 group-hover:-tranneutral-y-2">
+                                <div className="w-[280px] h-[340px] mb-[-4rem] z-10 relative transition-transform duration-300 group-hover:-translate-y-2">
                                     <img
                                         src={item.image}
                                         alt={item.name}
@@ -137,7 +137,7 @@ export default function CustomerQRScanner({ onNavigate }) {
                                             <div className="flex flex-col items-center shrink-0">
                                                 <div className="bg-neutral-900 dark:bg-neutral-700 text-white text-[10px] font-bold px-3 py-1 mb-1.5 rounded-full relative shadow-md">
                                                     SCAN ME
-                                                    <div className="absolute bottom-[-4px] left-1/2 -tranneutral-x-1/2 w-2 h-2 bg-neutral-900 dark:bg-neutral-700 rotate-45"></div>
+                                                    <div className="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-2 h-2 bg-neutral-900 dark:bg-neutral-700 rotate-45"></div>
                                                 </div>
                                                 <div className="bg-white p-2 rounded-xl border border-neutral-200 dark:border-neutral-300 shadow-sm">
                                                     <QrCode size={36} className="text-black" />

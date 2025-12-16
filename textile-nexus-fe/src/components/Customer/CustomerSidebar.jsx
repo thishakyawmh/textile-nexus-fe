@@ -9,7 +9,8 @@ import {
     ShoppingCart,
     LayoutGrid,
     BarChart2,
-    Scissors
+    Scissors,
+    X
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import ThemeToggle from '../ThemeToggle';
@@ -26,12 +27,18 @@ export default function CustomerSidebar({ activePage, sidebarOpen, setSidebarOpe
 
     return (
         <aside className={cn(
-            "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-200 dark:border-white/10 transform transition-transform duration-300 ease-in-out lg:relative lg:tranneutral-x-0 flex flex-col justify-between py-6 pl-4 pr-4",
-            sidebarOpen ? "tranneutral-x-0" : "-tranneutral-x-full"
+            "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-200 dark:border-white/10 transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 flex flex-col justify-between py-6 pl-4 pr-4",
+            sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}>
             <div>
                 {/* Logo */}
                 <div className="flex items-center gap-3 mb-12 px-2">
+                    <button
+                        onClick={() => setSidebarOpen(false)}
+                        className="lg:hidden absolute top-4 right-4 p-2 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200"
+                    >
+                        <X size={20} />
+                    </button>
                     <img src="/images/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
                     <div className="flex flex-col">
                         <span className="text-xl font-bold text-neutral-900 dark:text-white leading-none">Textile Nexus</span>

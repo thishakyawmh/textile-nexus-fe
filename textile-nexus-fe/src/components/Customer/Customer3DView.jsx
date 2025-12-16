@@ -74,7 +74,7 @@ export default function Customer3DView({ onNavigate }) {
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />
-                                <div className="absolute bottom-6 left-1/2 -tranneutral-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                     VIEW 1
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ export default function Customer3DView({ onNavigate }) {
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />
-                                <div className="absolute bottom-6 left-1/2 -tranneutral-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                     VIEW 2
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ export default function Customer3DView({ onNavigate }) {
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />
-                                <div className="absolute bottom-6 left-1/2 -tranneutral-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                     VIEW 3
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ export default function Customer3DView({ onNavigate }) {
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />
-                                <div className="absolute bottom-6 left-1/2 -tranneutral-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/50 dark:bg-white/20 backdrop-blur px-4 py-2 rounded-full text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                                     VIEW 4
                                 </div>
                             </div>

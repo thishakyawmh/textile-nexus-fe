@@ -66,7 +66,7 @@ export default function Signup({ onNavigate }) {
                                     <option className="text-black bg-white">Customer</option>
                                 </select>
                             </div>
-                            <ChevronDown size={16} className="absolute right-4 top-1/2 mt-1 -tranneutral-y-1/2 text-neutral-400 pointer-events-none" />
+                            <ChevronDown size={16} className="absolute right-4 top-1/2 mt-1 -translate-y-1/2 text-neutral-400 pointer-events-none" />
                         </fieldset>
                     </div>
 

@@ -102,7 +102,7 @@ export default function TailorFabricMarket({ onNavigate }) {
                     <div className="flex justify-between items-center mb-8">
                         <h1 className="text-2xl font-bold text-neutral-900 dark:text-white">Fabric Stock</h1>
                         <div className="relative">
-                            <Search size={16} className="absolute left-3 top-1/2 -tranneutral-y-1/2 text-neutral-400" />
+                            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
                             <input
                                 type="text"
                                 placeholder="Search product name"

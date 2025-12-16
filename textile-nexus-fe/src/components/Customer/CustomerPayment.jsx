@@ -115,7 +115,7 @@ export default function CustomerPayment({ onNavigate }) {
                                         className={`w-10 h-5 rounded-full p-1 cursor-pointer transition-colors ${saveCard ? 'bg-[#EAB308]' : 'bg-neutral-300 dark:bg-neutral-600'}`}
                                         onClick={() => setSaveCard(!saveCard)}
                                     >
-                                        <div className={`w-3 h-3 bg-white rounded-full shadow-sm transform transition-transform ${saveCard ? 'tranneutral-x-5' : 'tranneutral-x-0'}`}></div>
+                                        <div className={`w-3 h-3 bg-white rounded-full shadow-sm transform transition-transform ${saveCard ? 'translate-x-5' : 'translate-x-0'}`}></div>
                                     </div>
                                 </div>
 

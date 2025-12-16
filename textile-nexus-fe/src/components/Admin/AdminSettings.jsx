@@ -160,7 +160,7 @@ export default function AdminSettings({ onNavigate }) {
                                                 <option>Sri Lanka (GMT+5:30)</option>
                                                 <option>London (GMT+0:00)</option>
                                             </select>
-                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400 pointer-events-none" />
+                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" />
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2">
@@ -173,7 +173,7 @@ export default function AdminSettings({ onNavigate }) {
                                             >
                                                 <option>English (US)</option>
                                             </select>
-                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400 pointer-events-none" />
+                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" />
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2">
@@ -187,7 +187,7 @@ export default function AdminSettings({ onNavigate }) {
                                                 <option>LKR</option>
                                                 <option>USD</option>
                                             </select>
-                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400 pointer-events-none" />
+                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" />
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2">
@@ -201,7 +201,7 @@ export default function AdminSettings({ onNavigate }) {
                                                 <option>Light</option>
                                                 <option>Dark</option>
                                             </select>
-                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400 pointer-events-none" />
+                                            <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" />
                                         </div>
                                     </div>
                                 </div>
@@ -225,7 +225,7 @@ export default function AdminSettings({ onNavigate }) {
                                             readOnly
                                             className="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 rounded-xl text-sm font-medium text-neutral-700 dark:text-white outline-none focus:border-black dark:focus:border-white transition-colors"
                                         />
-                                        <button type="button" onClick={() => setShowCurrentPw(!showCurrentPw)} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400">
+                                        <button type="button" onClick={() => setShowCurrentPw(!showCurrentPw)} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400">
                                             {showCurrentPw ? <EyeOff size={16} /> : <Eye size={16} />}
                                         </button>
                                     </div>
@@ -237,7 +237,7 @@ export default function AdminSettings({ onNavigate }) {
                                             type={showNewPw ? "text" : "password"}
                                             className="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 rounded-xl text-sm font-medium text-neutral-700 dark:text-white outline-none focus:border-black dark:focus:border-white transition-colors"
                                         />
-                                        <button type="button" onClick={() => setShowNewPw(!showNewPw)} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400">
+                                        <button type="button" onClick={() => setShowNewPw(!showNewPw)} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400">
                                             {showNewPw ? <EyeOff size={16} /> : <Eye size={16} />}
                                         </button>
                                     </div>
@@ -249,7 +249,7 @@ export default function AdminSettings({ onNavigate }) {
                                             type={showConfirmPw ? "text" : "password"}
                                             className="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 rounded-xl text-sm font-medium text-neutral-700 dark:text-white outline-none focus:border-black dark:focus:border-white transition-colors"
                                         />
-                                        <button type="button" onClick={() => setShowConfirmPw(!showConfirmPw)} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400">
+                                        <button type="button" onClick={() => setShowConfirmPw(!showConfirmPw)} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400">
                                             {showConfirmPw ? <EyeOff size={16} /> : <Eye size={16} />}
                                         </button>
                                     </div>
@@ -270,7 +270,7 @@ export default function AdminSettings({ onNavigate }) {
                                             <option>Enabled</option>
                                             <option>Disabled</option>
                                         </select>
-                                        <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400 pointer-events-none" />
+                                        <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" />
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-2">
@@ -280,7 +280,7 @@ export default function AdminSettings({ onNavigate }) {
                                             <option>30 mins</option>
                                             <option>1 hour</option>
                                         </select>
-                                        <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-neutral-400 pointer-events-none" />
+                                        <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" />
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-2">

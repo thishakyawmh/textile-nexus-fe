@@ -6,7 +6,8 @@ import {
     CreditCard,
     Settings,
     LogOut,
-    AlertCircle
+    AlertCircle,
+    X
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import ThemeToggle from '../ThemeToggle';
@@ -56,11 +57,17 @@ export default function AdminSidebar({ activePage, onNavigate, sidebarOpen, setS
     return (
         <>
             <aside className={cn(
-                "fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-200 dark:border-white/10 transform transition-transform duration-300 ease-in-out lg:tranneutral-x-0 overflow-y-auto flex flex-col justify-between h-screen",
-                sidebarOpen ? "tranneutral-x-0" : "-tranneutral-x-full"
+                "fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white dark:bg-black border-r border-neutral-200 dark:border-white/10 transform transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-y-auto flex flex-col justify-between h-screen",
+                sidebarOpen ? "translate-x-0" : "-translate-x-full"
             )}>
                 <div>
-                    <div className="p-6 flex items-center gap-3 mb-6">
+                    <div className="p-6 flex items-center gap-3 mb-6 relative">
+                        <button
+                            onClick={() => setSidebarOpen(false)}
+                            className="lg:hidden absolute top-0 right-0 p-2 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200"
+                        >
+                            <X size={20} />
+                        </button>
                         <img
                             src="/images/logo.png" alt="Logo" className="w-10 h-10 object-contain"
                         />

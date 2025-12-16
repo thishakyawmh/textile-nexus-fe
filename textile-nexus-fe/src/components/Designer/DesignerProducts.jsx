@@ -219,10 +219,10 @@ export default function DesignerProducts({ onNavigate }) {
                                 <div className="flex gap-4 h-full">
                                     <div className="w-1/2 relative bg-white rounded-lg overflow-hidden shadow-sm">
                                         <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
-                                        <button className="absolute left-2 top-1/2 -tranneutral-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center text-neutral-600 hover:bg-white">
+                                        <button className="absolute left-2 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center text-neutral-600 hover:bg-white">
                                             <ChevronLeft size={14} />
                                         </button>
-                                        <button className="absolute right-2 top-1/2 -tranneutral-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center text-neutral-600 hover:bg-white">
+                                        <button className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center text-neutral-600 hover:bg-white">
                                             <ChevronRight size={14} />
                                         </button>
                                     </div>
