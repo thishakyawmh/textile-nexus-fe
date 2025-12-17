@@ -114,12 +114,19 @@ export default function AdminUserControls({ onNavigate }) {
                         </button>
                         <div className="flex items-center gap-3 cursor-pointer pl-2">
                             <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
-                                AD
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <div className="hidden md:block text-left">
                                 <p className="text-sm font-bold text-neutral-800 leading-tight">Admin User</p>
                                 <p className="text-xs text-neutral-400">Super Admin</p>
                             </div>
+                            <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>
                     </div>
                 </header>

@@ -135,8 +135,18 @@ export default function AdminLeaderboard({ onNavigate }) {
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
                         </button>
                         <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 font-bold overflow-hidden border-2 border-white shadow-sm">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
+                            </div>
+                            <div className="hidden md:block text-left">
+                                <p className="text-sm font-bold text-neutral-800 leading-tight">Admin User</p>
+                                <p className="text-xs text-neutral-400">Super Admin</p>
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>
@@ -289,7 +299,7 @@ export default function AdminLeaderboard({ onNavigate }) {
 
                             <div className="h-[200px] flex items-center justify-center">
                                 <img
-                                    src="/images/world-map.png"
+                                    src="/images/Customer/Admin/world-map.jpg"
                                     alt="Sales mapping by country"
                                     className="max-h-full w-auto object-contain opacity-90 dark:opacity-80"
                                 />
