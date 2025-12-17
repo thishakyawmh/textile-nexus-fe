@@ -29,14 +29,14 @@ const SCAN_DATA_PREV = [
 ];
 
 const RECENT_SCANS = [
-    { id: 1, name: 'Lisa', date: 'Today, 5.00 PM', img: '' },
-    { id: 2, name: 'John', date: 'Today, 1.00 PM', img: '' },
-    { id: 3, name: 'Olivia', date: 'Today, 9.00 AM', img: '' },
-    { id: 4, name: 'Robert', date: 'Yesterday, 10.00 PM', img: '' },
-    { id: 5, name: 'Meena', date: 'Yesterday, 8.00 PM', img: '' },
-    { id: 6, name: 'Emma', date: '20 Nov 2025, 5.00 PM', img: '' },
-    { id: 7, name: 'Sora', date: '17 Nov 2025, 1.00 PM', img: '' },
-    { id: 8, name: 'Jack', date: '14 Nov 2025, 11.00 PM', img: '' },
+    { id: 1, name: 'Lisa', date: 'Today, 5.00 PM', img: '/images/Customer/Tailor/p1.jpeg' },
+    { id: 2, name: 'John', date: 'Today, 1.00 PM', img: '/images/Customer/Tailor/p2.jpeg' },
+    { id: 3, name: 'Olivia', date: 'Today, 9.00 AM', img: '/images/Customer/Tailor/p1.jpeg' },
+    { id: 4, name: 'Robert', date: 'Yesterday, 10.00 PM', img: '/images/Customer/Tailor/p3.jpeg' },
+    { id: 5, name: 'Meena', date: 'Yesterday, 8.00 PM', img: '/images/Customer/Tailor/p1.jpeg' },
+    { id: 6, name: 'Emma', date: '20 Nov 2025, 5.00 PM', img: '/images/Customer/Tailor/p3.jpeg' },
+    { id: 7, name: 'Sora', date: '17 Nov 2025, 1.00 PM', img: '/images/Customer/Tailor/p1.jpeg' },
+    { id: 8, name: 'Jack', date: '14 Nov 2025, 11.00 PM', img: '/images/Customer/Tailor/p3.jpeg' },
 ];
 
 export default function TailorAIMeasurements({ onNavigate }) {
@@ -85,8 +85,14 @@ export default function TailorAIMeasurements({ onNavigate }) {
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
                         <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-white/10 shadow-sm transition-colors">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>
@@ -103,7 +109,7 @@ export default function TailorAIMeasurements({ onNavigate }) {
                             {/* Body Scan Image */}
                             <div className="bg-neutral-50 dark:bg-white/5 rounded-3xl p-6 flex items-center justify-center h-[500px] border border-neutral-100 dark:border-white/10 transition-colors">
                                 <div className="relative w-full h-full">
-                                    <img src="" alt="img" className="w-full h-full object-contain opacity-50" />
+                                    <img src="/images/Customer/Tailor/AIMes.jpeg" alt="img" className="w-full h-full object-contain opacity-50" />
 
                                 </div>
                             </div>

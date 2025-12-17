@@ -15,13 +15,14 @@ import {
 import FactorySidebar from './FactorySidebar';
 
 const FABRIC_STOCK_DATA = [
-    {
+  {
         id: '1',
         name: 'Cotton Plain',
         category: 'Cotton',
         price: 250,
         piece: 180,
-        colors: ['#000000', '#94a3b8', '#f87171'],
+        colors: ['#000000', '#94a3b8', '#f87171'], // Black, Grey, Soft Red
+        image: '/images/Customer/FabricMarket/Cotton Plain White.jpeg'
     },
     {
         id: '2',
@@ -29,7 +30,8 @@ const FABRIC_STOCK_DATA = [
         category: 'Denim',
         price: 750,
         piece: 95,
-        colors: ['#000000', '#f87171', '#3b82f6', '#eab308']
+        colors: ['#000000', '#f87171', '#3b82f6', '#eab308'], // Black, Red, Blue, Yellow
+        image: '/images/Customer/FabricMarket/Premium Denim.png'
     },
     {
         id: '3',
@@ -37,7 +39,8 @@ const FABRIC_STOCK_DATA = [
         category: 'Silk',
         price: '1,200',
         piece: 60,
-        colors: ['#9d174d', '#60a5fa', '#1e1b4b', '#4f46e5']
+        colors: ['#9d174d', '#60a5fa', '#1e1b4b', '#4f46e5'], // Maroon, Light Blue, Dark Blue, Indigo
+        image: '/images/Customer/FabricMarket/Pure Silk.jpg'
     },
     {
         id: '4',
@@ -45,7 +48,8 @@ const FABRIC_STOCK_DATA = [
         category: 'Linen',
         price: 680,
         piece: 140,
-        colors: ['#1e3a8a', '#000000', '#9f1239']
+        colors: ['#1e3a8a', '#000000', '#9f1239'], // Navy, Black, Dark Red
+        image: '/images/Customer/FabricMarket/Linen Soft.jpeg'
     },
     {
         id: '5',
@@ -53,7 +57,8 @@ const FABRIC_STOCK_DATA = [
         category: 'Satin',
         price: 850,
         piece: 110,
-        colors: ['#1e3a8a', '#000000', '#9f1239']
+        colors: ['#1e3a8a', '#000000', '#9f1239'],
+        image: '/images/Customer/FabricMarket/satin shiny.webp'
     },
     {
         id: '6',
@@ -61,7 +66,8 @@ const FABRIC_STOCK_DATA = [
         category: 'Velvet',
         price: '1,050',
         piece: 70,
-        colors: ['#000000', '#f87171', '#3b82f6', '#eab308']
+        colors: ['#000000', '#f87171', '#3b82f6', '#eab308'],
+        image: '/images/Customer/FabricMarket/Velvet Black Thick.jpg'
     },
     {
         id: '7',
@@ -69,7 +75,8 @@ const FABRIC_STOCK_DATA = [
         category: 'Rayon',
         price: 520,
         piece: 200,
-        colors: ['#9d174d', '#60a5fa', '#1e1b4b', '#4f46e5']
+        colors: ['#9d174d', '#60a5fa', '#1e1b4b', '#4f46e5'],
+        image: '/images/Customer/FabricMarket/Rayon Floral Print.jpg'
     },
 ];
 
@@ -90,7 +97,7 @@ export default function FactoryFabricStock({ onNavigate }) {
             {/* Main Content */}
             <main className="flex-1 flex flex-col h-screen overflow-hidden">
                 {/* Header */}
-                <header className="h-20 bg-white dark:bg-white/5 dark:backdrop-blur-xl border-b border-neutral-100 dark:border-white/10 flex items-center justify-between px-6 lg:px-10 shrink-0 transition-colors">
+              <header className="h-20 bg-white dark:bg-white/5 dark:backdrop-blur-xl border-b border-neutral-100 dark:border-white/10 flex items-center justify-between px-6 lg:px-10 shrink-0 transition-colors">
                     <div className="flex items-center gap-4 lg:hidden">
                         <button onClick={() => setSidebarOpen(true)} className="p-2 -ml-2 text-neutral-500">
                             <Menu size={24} />
@@ -118,9 +125,15 @@ export default function FactoryFabricStock({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-white/10 shadow-sm transition-colors">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                         <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>
@@ -155,9 +168,9 @@ export default function FactoryFabricStock({ onNavigate }) {
                     {/* Stock Table */}
                     <div className="bg-white dark:bg-white/5 rounded-3xl shadow-sm border border-neutral-100 dark:border-white/10 overflow-hidden transition-colors">
                         <div className="overflow-x-auto">
-                            <table className="w-full text-left border-collapse">
+                             <table className="w-full text-left border-collapse">
                                 <thead>
-                                    <tr className="bg-white dark:bg-white/5 border-b border-neutral-100 dark:border-white/10 text-xs font-bold text-neutral-800 dark:text-neutral-200 transition-colors">
+                                    <tr className="bg-white dark:bg-white/5 text-neutral-800 dark:text-white text-xs font-bold border-b border-neutral-100 dark:border-white/10 transition-colors">
                                         <th className="px-8 py-5 text-center w-32">Image</th>
                                         <th className="px-8 py-5">Product Name</th>
                                         <th className="px-8 py-5">Category</th>
@@ -171,14 +184,21 @@ export default function FactoryFabricStock({ onNavigate }) {
                                     {FABRIC_STOCK_DATA.map((item, index) => (
                                         <tr key={item.id} className="border-b border-neutral-50 dark:border-white/10 last:border-none hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors">
                                             <td className="px-8 py-4">
-                                                <div className="w-12 h-12 rounded-lg bg-neutral-100 dark:bg-neutral-800 overflow-hidden shadow-inner transition-colors">
-                                                    {/* Placeholder logic for fabric texture */}
-                                                    <div className="w-full h-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center transition-colors">
-                                                        <div className="w-full h-full opacity-50" style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '4px 4px' }}></div>
-                                                    </div>
+                                                <div className="w-12 h-12 rounded-lg bg-neutral-100 dark:bg-neutral-800 overflow-hidden">
+                                                    <img
+                                                        src={item.image}
+                                                        alt={item.name}
+                                                        className="w-full h-full object-cover"
+                                                        loading="lazy"
+                                                        onError={(e) => {
+                                                            e.currentTarget.style.display = 'none';
+                                                            e.currentTarget.parentElement.classList.add('flex', 'items-center', 'justify-center');
+                                                            e.currentTarget.parentElement.innerHTML = '<span class="text-[10px] text-neutral-400">No Img</span>';
+                                                        }}
+                                                    />
                                                 </div>
                                             </td>
-                                            <td className="px-8 py-4 text-neutral-900 dark:text-white font-medium">{item.name}</td>
+                                            <td className="px-8 py-4 text-neutral-900 dark:text-white">{item.name}</td>
                                             <td className="px-8 py-4">{item.category}</td>
                                             <td className="px-8 py-4 font-semibold text-neutral-900 dark:text-white">{item.price}</td>
                                             <td className="px-8 py-4">{item.piece}</td>
@@ -187,7 +207,7 @@ export default function FactoryFabricStock({ onNavigate }) {
                                                     {item.colors.map((color, i) => (
                                                         <div
                                                             key={i}
-                                                            className="w-4 h-4 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm"
+                                                            className="w-4 h-4 rounded-full border border-neutral-200 dark:border-neutral-600 shadow-sm"
                                                             style={{ backgroundColor: color }}
                                                         />
                                                     ))}
@@ -195,10 +215,10 @@ export default function FactoryFabricStock({ onNavigate }) {
                                             </td>
                                             <td className="px-8 py-4">
                                                 <div className="flex items-center justify-center gap-2">
-                                                    <button className="p-2 border border-neutral-200 dark:border-neutral-700 rounded-lg text-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors shadow-sm">
+                                                    <button className="p-2 border border-neutral-200 dark:border-neutral-700 rounded-lg text-neutral-500 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:text-neutral-800 dark:hover:text-white transition-colors">
                                                         <Edit size={16} />
                                                     </button>
-                                                    <button className="p-2 border border-neutral-200 dark:border-neutral-700 rounded-lg text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:border-rose-200 transition-colors shadow-sm">
+                                                    <button className="p-2 border border-neutral-200 dark:border-neutral-700 rounded-lg text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:border-rose-200 transition-colors">
                                                         <Trash2 size={16} />
                                                     </button>
                                                 </div>

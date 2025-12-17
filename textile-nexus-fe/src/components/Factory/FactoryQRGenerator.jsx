@@ -36,7 +36,7 @@ export default function FactoryQRGenerator({ onNavigate }) {
             {/* Main Content */}
             <main className="flex-1 flex flex-col h-screen overflow-hidden">
                 {/* Header */}
-                <header className="h-20 bg-white dark:bg-white/5 dark:backdrop-blur-xl border-b border-neutral-100 dark:border-white/10 flex items-center justify-between px-6 lg:px-10 shrink-0 transition-colors">
+                 <header className="h-20 bg-white dark:bg-white/5 dark:backdrop-blur-xl border-b border-neutral-100 dark:border-white/10 flex items-center justify-between px-6 lg:px-10 shrink-0 transition-colors">
                     <div className="flex items-center gap-4 lg:hidden">
                         <button onClick={() => setSidebarOpen(true)} className="p-2 -ml-2 text-neutral-500">
                             <Menu size={24} />
@@ -64,9 +64,15 @@ export default function FactoryQRGenerator({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/20 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold overflow-hidden border-2 border-white dark:border-white/10 shadow-sm transition-colors">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                         <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>

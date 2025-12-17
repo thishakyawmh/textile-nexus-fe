@@ -105,7 +105,7 @@ export default function FactoryDashboard({ onNavigate }) {
                         </button>
                     </div>
 
-                    <div className="hidden lg:flex items-center bg-[#F9FAFB] dark:bg-neutral-800 rounded-xl px-4 py-2.5 w-96 transition-colors">
+                    <div className="hidden lg:flex items-center bg-neutral-50 dark:bg-neutral-800 rounded-xl px-4 py-2.5 w-96 transition-colors">
                         <Search size={18} className="text-neutral-400 mr-2" />
                         <input
                             type="text"
@@ -116,19 +116,25 @@ export default function FactoryDashboard({ onNavigate }) {
 
                     <div className="flex items-center gap-6">
                         <div className="hidden md:flex items-center gap-2 cursor-pointer">
-                            <div className="w-5 h-5 rounded-full bg-neutral-200 overflow-hidden">
+                            <div className="w-5 h-5 rounded-full bg-neutral-200 dark:bg-neutral-700 overflow-hidden">
                                 <img src="/images/usa.png" alt="US" className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none' }} />
                             </div>
-                            <span className="text-sm font-semibold text-neutral-600">Eng (US)</span>
+                            <span className="text-sm font-semibold text-neutral-600 dark:text-neutral-300">Eng (US)</span>
                             <ChevronDown size={14} className="text-neutral-400" />
                         </div>
-                        <button className="relative p-2 bg-orange-50 rounded-xl">
+                        <button className="relative p-2 bg-orange-50 dark:bg-orange-900/20 rounded-xl transition-colors">
                             <Bell size={20} className="text-orange-400" />
-                            <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+                            <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center text-rose-600 font-bold overflow-hidden border-2 border-white shadow-sm">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                         <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>

@@ -10,19 +10,19 @@ import {
 import TailorSidebar from './TailorSidebar';
 
 const RECOMMENDED_FABRICS = [
-    { id: 1, name: 'Besgris Blossom Print', desc: 'Used frequently for blouses.', image: '' },
-    { id: 2, name: 'Metric Woven Fabric', desc: 'Recommended for summer shirts.', image: '' },
-    { id: 3, name: 'Classic Linen Shirt', desc: 'High customer rating.', image: '' },
-    { id: 4, name: 'Silk Blue Mixed', desc: 'Supplier: Global Silks.', image: '' },
-    { id: 5, name: 'Silk Eku Silk', desc: 'Trending for bridal wear.', image: '' },
+    { id: 1, name: 'Besgris Blossom Print', desc: 'Used frequently for blouses.', image: '/images/Customer/Tailor/Besgris Blossom Print.jpeg' },
+    { id: 2, name: 'Metric Woven Fabric', desc: 'Recommended for summer shirts.', image: '/images/Customer/Tailor/Metric Woven Fabric.jpeg' },
+    { id: 3, name: 'Classic Linen Shirt', desc: 'High customer rating.', image: '/images/Customer/Tailor/Classic Linen Shirt.jpeg' },
+    { id: 4, name: 'Silk Blue Mixed', desc: 'Supplier: Global Silks.', image: '/images/Customer/Tailor/Silk Blue Mixed.jpeg' },
+    { id: 5, name: 'Silk Eku Silk', desc: 'Trending for bridal wear.', image: '/images/Customer/Tailor/Silk Eku Silk.jpeg' },
 ];
 
 const AI_MATCHING = [
-    { id: 1, name: 'Imyaged Blossom Print', desc: 'Needed for casual blouses.', image: '' },
-    { id: 2, name: 'Silk Hittin Crepes', desc: 'Matches Saree Jacket Order.', image: '' },
-    { id: 3, name: 'Denim', desc: 'Supplier: TexStuffs', image: '' },
-    { id: 4, name: 'Denotes fabric', desc: 'Global Fabrics.', image: '' },
-    { id: 5, name: 'Upcycled Silk Neck Tie', desc: 'Limited stock.', image: '' },
+    { id: 1, name: 'Imyaged Blossom Print', desc: 'Needed for casual blouses.', image: '/images/Customer/Tailor/Imyaged Blossom Print.jpeg' },
+    { id: 2, name: 'Silk Hittin Crepes', desc: 'Matches Saree Jacket Order.', image: '/images/Customer/Tailor/Silk Hittin Crepes.jpeg' },
+    { id: 3, name: 'Denim', desc: 'Supplier: TexStuffs', image: '/images/Customer/Tailor/Denim.jpeg' },
+    { id: 4, name: 'Denotes fabric', desc: 'Global Fabrics.', image: '/images/Customer/Tailor/Denotes fabric.jpeg' },
+    { id: 5, name: 'Upcycled Silk Neck Tie', desc: 'Limited stock.', image: '/images/Customer/Tailor/Upcycled Silk Neck Tie.jpeg' },
 ];
 
 const CATEGORIES = [
@@ -88,9 +88,15 @@ export default function TailorFabricMarket({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-white/10 shadow-sm transition-colors">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                         <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>

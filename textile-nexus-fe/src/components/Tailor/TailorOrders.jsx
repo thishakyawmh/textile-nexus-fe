@@ -187,17 +187,23 @@ export default function TailorOrders({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 font-bold overflow-hidden border-2 border-white shadow-sm">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
-                            </div>
-                            <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
-                        </div>
+                        
                     </div>
                 </header>
 
                 <div className="flex-1 overflow-y-auto p-6 lg:p-10 scrollbar-hide">
-
+                   <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
+                            </div>
+                            <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
+                        </div>
                     <h1 className="text-2xl font-bold text-neutral-900 dark:text-white mb-8">Order Dashboard Overview</h1>
 
                     {/* Stats Grid */}

@@ -29,7 +29,7 @@ const PRODUCTS = [
         category: "Minimal / Abstract",
         materials: "Canvas, Linen, Blend Fabrics",
         price: "Rs. 1,300",
-        image: "https://images.unsplash.com/photo-1591369822096-35c9389e46eb?q=80&w=1000&auto=format&fit=crop" // Blue suit placeholder
+        image: "/images/Customer/design explore/Minimal Dusty Blue.jpeg" // Blue suit placeholder
     },
     {
         id: 2,
@@ -37,7 +37,7 @@ const PRODUCTS = [
         category: "Floral Print / Fashion Wear",
         materials: "Cotton, Linen, Rayon, Chiffon",
         price: "Rs. 1,200",
-        image: "https://images.unsplash.com/photo-1631233859262-4396b9bd6545?q=80&w=1000&auto=format&fit=crop" // Floral placeholder
+        image: "/images/Customer/design explore/Floral Breeze Pattern.jpeg" // Floral placeholder
     },
     {
         id: 3,
@@ -45,7 +45,7 @@ const PRODUCTS = [
         category: "Nature / Organic Pattern",
         materials: "Rayon, Sustainable Fabrics",
         price: "Rs. 1,400",
-        image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop" // Brown/Pattern placeholder
+        image: "/images/Customer/design explore/Leafline Organic Print.jpeg" // Brown/Pattern placeholder
     }
 ];
 
@@ -132,9 +132,15 @@ export default function DesignerProducts({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-black"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-neutral-700 shadow-sm">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                       <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>

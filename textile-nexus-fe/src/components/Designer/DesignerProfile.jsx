@@ -58,9 +58,15 @@ export default function DesignerProfile({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-black"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-neutral-700 shadow-sm">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                         <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>
@@ -73,7 +79,7 @@ export default function DesignerProfile({ onNavigate }) {
                     {/* Profile Bio Section */}
                     <div className="flex flex-col md:flex-row gap-8 items-start mb-12">
                         <div className="w-32 h-32 rounded-full overflow-hidden shrink-0 border-4 border-white dark:border-neutral-700 shadow-lg bg-neutral-200 dark:bg-neutral-700">
-                            <img src="" alt="img" className="w-full h-full object-cover" />
+                            <img src="/images/Customer/design explore/Michel Perere.jpeg" alt="img" className="w-full h-full object-cover" />
                         </div>
                         <div>
                             <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-2">Michel Perere</h2>
@@ -103,7 +109,7 @@ export default function DesignerProfile({ onNavigate }) {
 
                         {/* Card 3 */}
                         <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl p-6 rounded-2xl shadow-sm border border-neutral-50 dark:border-white/10 flex items-center justify-between min-h-[140px] transition-colors">
-                            <p className="font-bold text-sm text-neutral-800 dark:text-neutral-200 pr-4 opacity-0">Hidden Text</p>
+                            <p className="font-bold text-sm text-neutral-800 dark:text-neutral-200 pr-4">Fashion Designer at Leading Fashion Brand</p>
                             <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-500/20 text-purple-500 flex items-center justify-center shrink-0">
                                 <Shirt size={20} />
                             </div>
@@ -123,10 +129,10 @@ export default function DesignerProfile({ onNavigate }) {
                         <h3 className="text-lg font-bold text-blue-900 dark:text-blue-400 mb-6">Most view design</h3>
                         <div className="flex gap-6 items-center justify-between">
                             <div className="w-[45%] aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-neutral-200 dark:bg-neutral-700">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                                <img src="/images/Customer/design explore/Silk_Evening.jpg" alt="img" className="w-full h-full object-cover" />
                             </div>
                             <div className="w-[45%] aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-neutral-200 dark:bg-neutral-700">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                                <img src="/images/Customer/design explore/Wool_Coat.jpg" alt="img" className="w-full h-full object-cover" />
                             </div>
                             <button className="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 flex items-center justify-center text-neutral-600 dark:text-neutral-300 transition-colors">
                                 <ChevronRight size={24} />

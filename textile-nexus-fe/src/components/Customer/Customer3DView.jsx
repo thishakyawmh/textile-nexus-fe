@@ -53,9 +53,15 @@ export default function Customer3DView({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-white/10 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-white/10 shadow-sm">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                         <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>
@@ -70,7 +76,7 @@ export default function Customer3DView({ onNavigate }) {
                             {/* Angle 1 */}
                             <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border-white/10 rounded-[2rem] overflow-hidden shadow-lg relative h-full group border border-neutral-100 dark:border-white/10 transition-all duration-300">
                                 <img
-                                    src=""
+                                    src="/images/Customer/Qr code/3d view/1.png"
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />
@@ -82,7 +88,7 @@ export default function Customer3DView({ onNavigate }) {
                             {/* Angle 2 */}
                             <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border-white/10 rounded-[2rem] overflow-hidden shadow-lg relative h-full group border border-neutral-100 dark:border-white/10 transition-all duration-300">
                                 <img
-                                    src=""
+                                    src="/images/Customer/Qr code/3d view/2.png"
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />
@@ -94,7 +100,7 @@ export default function Customer3DView({ onNavigate }) {
                             {/* Angle 3 */}
                             <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border-white/10 rounded-[2rem] overflow-hidden shadow-lg relative h-full group border border-neutral-100 dark:border-white/10 transition-all duration-300">
                                 <img
-                                    src=""
+                                    src="/images/Customer/Qr code/3d view/3.png"
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />
@@ -106,7 +112,7 @@ export default function Customer3DView({ onNavigate }) {
                             {/* Angle 4 */}
                             <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border-white/10 rounded-[2rem] overflow-hidden shadow-lg relative h-full group border border-neutral-100 dark:border-white/10 transition-all duration-300">
                                 <img
-                                    src=""
+                                    src="/images/Customer/Qr code/3d view/4.png"
                                     alt="img"
                                     className="w-full h-full object-cover"
                                 />

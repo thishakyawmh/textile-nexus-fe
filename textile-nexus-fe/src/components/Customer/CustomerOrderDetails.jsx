@@ -9,15 +9,15 @@ import {
 import CustomerSidebar from './CustomerSidebar';
 
 const SIMILAR_DESIGNS = [
-    { id: 1, name: 'Denim Frock', img: 'https://placehold.co/300x400/1e3a8a/ffffff?text=Denim+Frock' },
-    { id: 2, name: 'Kurtha', img: 'https://placehold.co/300x400/064e3b/ffffff?text=Kurtha' },
-    { id: 3, name: 'Glacial Overcoat', img: 'https://placehold.co/300x400/505050/ffffff?text=Overcoat' },
-    { id: 4, name: 'Coat', img: 'https://placehold.co/300x400/78350f/ffffff?text=Long+Coat' },
-    { id: 5, name: 'Denim Frock', img: 'https://placehold.co/300x400/1e40af/ffffff?text=Denim+Blue' },
-    { id: 6, name: 'Kurtha', img: 'https://placehold.co/300x400/166534/ffffff?text=Green+Kurtha' },
-    { id: 7, name: 'Glacial Overcoat', img: 'https://placehold.co/300x400/374151/ffffff?text=Grey+Coat' },
-    { id: 8, name: 'Coat', img: 'https://placehold.co/300x400/451a03/ffffff?text=Brown+Coat' },
-    { id: 9, name: 'Denim Frock', img: 'https://placehold.co/300x400/172554/ffffff?text=Dark+Denim' },
+    { id: 1, name: 'Denim Frock', img: '/images/Customer/Tailor/Denimfrock.jpeg' },
+    { id: 2, name: 'Kurtha', img: '/images/Customer/Tailor/6.png' },
+    { id: 3, name: 'Glacial Overcoat', img: '/images/Customer/Tailor/5.png' },
+    { id: 4, name: 'Coat', img: '/images/Customer/Tailor/11.png' },
+    { id: 5, name: 'Denim Frock', img: '/images/Customer/Tailor/Denimfrock.jpeg' },
+    { id: 6, name: 'Kurtha', img: '/images/Customer/Tailor/6.png' },
+    { id: 7, name: 'Glacial Overcoat', img: '/images/Customer/Tailor/5.png' },
+    { id: 8, name: 'Coat', img: '/images/Customer/Tailor/11.png' },
+    { id: 9, name: 'Denim Frock', img: '/images/Customer/Tailor/Denimfrock.jpeg' },
 ];
 
 export default function CustomerOrderDetails({ onNavigate }) {
@@ -26,7 +26,7 @@ export default function CustomerOrderDetails({ onNavigate }) {
     // Selected item (hardcoded based on mockup)
     const selectedItem = {
         name: 'Leather Jacket',
-        image: 'https://placehold.co/500x600/7f1d1d/ffffff?text=Leather+Jacket', // Leather jacket placceholder
+        image: '/images/Customer/Tailor/9.png', // Leather jacket placceholder
         price: 'Rs. 5,500.00',
         delivery: 'DD/MM',
         material: 'Leather'
@@ -75,8 +75,14 @@ export default function CustomerOrderDetails({ onNavigate }) {
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
                         <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-white/10 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-white/10 shadow-sm transition-colors">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>

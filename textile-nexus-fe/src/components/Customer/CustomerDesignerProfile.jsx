@@ -102,9 +102,15 @@ export default function CustomerDesignerProfile({ onNavigate }) {
                             <Bell size={20} className="text-orange-400" />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-neutral-900"></span>
                         </button>
-                        <div className="flex items-center gap-3 cursor-pointer pl-2">
-                            <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-white/10 flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold overflow-hidden border-2 border-white dark:border-white/10 shadow-sm transition-colors">
-                                <img src="" alt="img" className="w-full h-full object-cover" />
+                         <div className="flex items-center gap-3 cursor-pointer pl-2">
+                            <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">
+                                <img
+                                    src="/images/Customer/Admin/AD.jpg"
+                                    alt="Admin avatar"
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                                />
                             </div>
                             <ChevronDown size={14} className="text-neutral-400 hidden md:block" />
                         </div>
@@ -128,7 +134,7 @@ export default function CustomerDesignerProfile({ onNavigate }) {
                             <div className="absolute -top-16 left-10">
                                 <div className="w-32 h-32 rounded-full p-1 bg-white shadow-md">
                                     <div className="w-full h-full rounded-full overflow-hidden relative">
-                                        <img src="" alt="img" className="w-full h-full object-cover" />
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=256&q=80" alt="img" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
                                 <button className="absolute bottom-1 right-1 bg-black dark:bg-white text-white dark:text-black p-2 rounded-full border-4 border-white dark:border-white/10 shadow-sm hover:scale-105 transition-transform">
@@ -275,7 +281,7 @@ export default function CustomerDesignerProfile({ onNavigate }) {
                                         onClick={() => onNavigate('customer-order-details')}
                                         className="min-w-[30%] aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-100 relative group cursor-pointer"
                                     >
-                                        <img src="" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                        <img src="/images/Customer/design explore/4.png" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                                         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <h4 className="text-white font-bold text-lg">Royal Blue Evening Gown</h4>
                                             <p className="text-white/80 text-sm mt-1">Click to order</p>
@@ -287,7 +293,7 @@ export default function CustomerDesignerProfile({ onNavigate }) {
                                         onClick={() => onNavigate('customer-order-details')}
                                         className="min-w-[30%] aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-100 relative group scale-105 shadow-2xl z-10 border-4 border-white cursor-pointer"
                                     >
-                                        <img src="" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                        <img src="/images/Customer/design explore/1.png" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                                         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <h4 className="text-white font-bold text-lg">Classic Red Silhouette</h4>
                                             <p className="text-white/80 text-sm mt-1">Click to order</p>
@@ -299,7 +305,7 @@ export default function CustomerDesignerProfile({ onNavigate }) {
                                         onClick={() => onNavigate('customer-order-details')}
                                         className="min-w-[30%] aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-100 relative group cursor-pointer"
                                     >
-                                        <img src="" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                        <img src="/images/Customer/design explore/3.png" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                                         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <h4 className="text-white font-bold text-lg">Bridal Concept</h4>
                                             <p className="text-white/80 text-sm mt-1">Click to order</p>
@@ -311,7 +317,7 @@ export default function CustomerDesignerProfile({ onNavigate }) {
                                         onClick={() => onNavigate('customer-order-details')}
                                         className="min-w-[30%] aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-100 relative group cursor-pointer"
                                     >
-                                        <img src="" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                        <img src="/images/Customer/design explore/2.png" alt="img" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                                         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <h4 className="text-white font-bold text-lg">Emerald Green Gown</h4>
                                             <p className="text-white/80 text-sm mt-1">Click to order</p>
