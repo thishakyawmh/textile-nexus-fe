@@ -8,9 +8,7 @@ import {
     Eye,
     EyeOff,
 } from 'lucide-react';
-import { cn } from '../../lib/utils';
 import AdminSidebar from './AdminSidebar';
-import { useTheme } from '../../context/ThemeContext';
 
 // --- Mock Data ---
 
@@ -20,8 +18,6 @@ const DEVICES = [
 ];
 
 export default function AdminSettings({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const [name, setName] = useState('Bright Web');
@@ -300,7 +296,7 @@ export default function AdminSettings({ onNavigate }) {
                                 <p className="text-neutral-600 font-medium mb-6">You're signed in on these devices</p>
 
                                 <div className="space-y-4">
-                                    {DEVICES.map((device, index) => (
+                                    {DEVICES.map((device) => (
                                         <div key={index} className="flex gap-4 items-center justify-between text-sm py-2">
                                             <div className="w-24 font-bold text-neutral-700">{device.type}</div>
                                             <div className="w-32 text-neutral-700">{device.location}</div>
