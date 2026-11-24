@@ -38,7 +38,7 @@ export default function TailorCommunityHub({ onNavigate }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('groups'); // groups | ai-chat
 
-    const audioBarHeights = useMemo(() => Array.from({ length: 30 }, () => Math.random() * 10 + 5), []);
+    const audioBarHeights = useMemo(() => [6, 9, 7, 12, 8, 5, 10, 7, 11, 6, 9, 8, 12, 5, 7, 10, 6, 11, 8, 9, 5, 12, 7, 10, 6, 8, 11, 5, 9, 7], []);
 
     return (
         <div className="min-h-screen bg-white dark:bg-[#0F0F12] flex font-sans text-neutral-900 dark:text-neutral-50 transition-colors duration-300">
