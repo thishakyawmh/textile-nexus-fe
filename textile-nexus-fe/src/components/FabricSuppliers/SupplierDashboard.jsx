@@ -212,7 +212,7 @@ export default function SupplierDashboard({ onNavigate }) {
                                                 dataKey="value"
                                                 stroke="none"
                                             >
-                                                {ORDER_STATUS_DATA.map((entry) => (
+                                                {ORDER_STATUS_DATA.map((entry, index) => (
                                                     <Cell key={`cell-${index}`} fill={entry.color} />
                                                 ))}
                                             </Pie>
