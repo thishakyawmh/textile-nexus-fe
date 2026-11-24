@@ -26,7 +26,6 @@ import {
     Pie,
     Cell
 } from 'recharts';
-import { cn } from '../../lib/utils';
 import SupplierSidebar from './SupplierSidebar';
 import { useTheme } from '../../context/ThemeContext';
 
@@ -212,7 +211,7 @@ export default function SupplierDashboard({ onNavigate }) {
                                                 dataKey="value"
                                                 stroke="none"
                                             >
-                                                {ORDER_STATUS_DATA.map((entry, index) => (
+                                                {ORDER_STATUS_DATA.map((entry) => (
                                                     <Cell key={`cell-${index}`} fill={entry.color} />
                                                 ))}
                                             </Pie>
