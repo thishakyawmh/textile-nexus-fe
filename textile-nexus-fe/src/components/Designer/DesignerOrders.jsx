@@ -10,6 +10,7 @@ import {
     ChevronRight,
     X
 } from 'lucide-react';
+import { cn } from '../../lib/utils';
 import DesignerSidebar from './DesignerSidebar';
 
 // --- Mock Data ---
