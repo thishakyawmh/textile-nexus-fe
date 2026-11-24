@@ -199,7 +199,7 @@ export default function SupplierOrders({ onNavigate }) {
 
                                     {/* Calendar Grid */}
                                     <div className="grid grid-cols-7 gap-1 mb-6 text-center">
-                                        {calendarDays.map((date) => (
+                                        {calendarDays.map((date, index) => (
                                             <div key={index}
                                                 onClick={() => toggleDateSelection(date.day)}
                                                 className={cn(
