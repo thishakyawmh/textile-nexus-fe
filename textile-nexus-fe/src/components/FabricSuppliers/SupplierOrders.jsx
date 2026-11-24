@@ -10,6 +10,7 @@ import {
     ChevronRight,
     Calendar as CalendarIcon
 } from 'lucide-react';
+import { cn } from '../../lib/utils';
 import SupplierSidebar from './SupplierSidebar';
 
 // --- Mock Data ---
