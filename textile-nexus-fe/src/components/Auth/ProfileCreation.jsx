@@ -25,7 +25,7 @@ const ROLE_FIELDS = {
 };
 
 export default function ProfileCreation({ onNavigate }) {
-    const [role, setRole] = useState(() => {
+    const [role] = useState(() => {
         const storedRole = localStorage.getItem('userRole');
         return storedRole || 'Factory';
     });
