@@ -20,6 +20,7 @@ import {
     Legend
 } from 'recharts';
 import AdminSidebar from './AdminSidebar';
+import { useTheme } from '../../context/ThemeContext';
 
 // --- Mock Data for Charts ---
 
@@ -85,6 +86,8 @@ const CustomDot = (props) => {
 };
 
 export default function AdminLeaderboard({ onNavigate }) {
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [selectedPeriod] = useState('October');
 
