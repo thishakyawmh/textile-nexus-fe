@@ -141,7 +141,7 @@ export default function FactoryAICapacityPlanner({ onNavigate }) {
 
                                     {/* Rows */}
                                     <div className="relative z-10 space-y-8 py-4">
-                                        {GANTT_DATA.map((row) => (
+                                        {GANTT_DATA.map((row, index) => (
                                             <div key={index} className="relative h-10 flex items-center">
                                                 {/* Y-Axis Label */}
                                                 <div className="absolute -left-[180px] w-[160px] text-right text-sm font-medium text-neutral-700 dark:text-neutral-300">
