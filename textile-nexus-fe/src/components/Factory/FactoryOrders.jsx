@@ -11,7 +11,6 @@ import {
     ChevronLeft,
     ChevronRight
 } from 'lucide-react';
-import { cn } from '../../lib/utils';
 import FactorySidebar from './FactorySidebar';
 
 // --- Mock Data ---
@@ -215,7 +214,7 @@ export default function FactoryOrders({ onNavigate }) {
                                     </tr>
                                 </thead>
                                 <tbody className="text-sm font-medium text-neutral-600 dark:text-neutral-400 text-xs">
-                                    {ORDER_LIST.map((order, index) => (
+                                    {ORDER_LIST.map((order) => (
                                         <tr key={order.id} className="border-b border-neutral-50 dark:border-white/10 last:border-none hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors">
                                             <td className="px-8 py-5 text-neutral-900 dark:text-white font-semibold">{order.id}</td>
                                             <td className="px-8 py-5 text-neutral-900 dark:text-white">{order.product}</td>
