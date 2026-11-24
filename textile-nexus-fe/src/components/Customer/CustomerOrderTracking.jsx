@@ -115,7 +115,7 @@ export default function CustomerOrderTracking({ onNavigate }) {
                                 <div className="absolute top-1/2 left-0 w-[85%] h-0.5 bg-[#4F80FF] -z-10 -translate-y-1/2"></div>
 
                                 {/* Steps */}
-                                {steps.map((step) => {
+                                {steps.map((step, index) => {
                                     const isActive = index <= currentStep;
 
                                     return (
