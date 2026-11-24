@@ -11,6 +11,7 @@ import {
     ChevronLeft,
     ChevronRight
 } from 'lucide-react';
+import { cn } from '../../lib/utils';
 import FactorySidebar from './FactorySidebar';
 
 // --- Mock Data ---
