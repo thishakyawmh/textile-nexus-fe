@@ -9,6 +9,7 @@ import {
     X,
     ChevronDown
 } from 'lucide-react';
+import { cn } from '../../lib/utils';
 import ThemeToggle from '../ThemeToggle';
 
 const SidebarItem = ({ icon: Icon, label, active, onClick }) => (
