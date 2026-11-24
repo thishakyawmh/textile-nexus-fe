@@ -22,7 +22,6 @@ import {
 } from 'lucide-react';
 import DesignerSidebar from './DesignerSidebar';
 import { cn } from '../../lib/utils';
-import { useTheme } from '../../context/ThemeContext';
 
 // --- Mock Data ---
 
@@ -95,8 +94,6 @@ const AI_CREATIONS = [
 
 
 export default function DesignerCommunityHub({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('Groups'); // Groups vs AI Chat
 
