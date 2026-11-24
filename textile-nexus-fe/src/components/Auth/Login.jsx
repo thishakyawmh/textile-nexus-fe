@@ -8,8 +8,16 @@ export default function Login({ onNavigate, onLogin }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const demoAuthEnabled =
+        import.meta.env.DEV && import.meta.env.VITE_ENABLE_DEMO_AUTH === 'true';
+
     const handleLogin = () => {
-        // Credential Helper Map
+        if (!demoAuthEnabled) {
+            toast.error('Authentication is not connected. This is a frontend prototype.');
+            return;
+        }
+
+        // Local demo credentials are enabled only in explicit development mode.
         const credentials = {
             'customer@textilenexus.com': { pass: 'customer123', role: 'Customer' },
             'tailor@textilenexus.com': { pass: 'tailor123', role: 'Tailor' },
@@ -24,7 +32,6 @@ export default function Login({ onNavigate, onLogin }) {
         if (user && user.pass === password) {
             localStorage.setItem('userRole', user.role);
             localStorage.setItem('isLoggedIn', 'true');
-            // toast.success(`Welcome back, ${user.role}!`);
             onLogin && onLogin();
         } else {
             toast.error('Invalid email or password');
