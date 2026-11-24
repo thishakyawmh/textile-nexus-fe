@@ -1,0 +1,27 @@
+name: Textile Nexus Frontend CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, "security/**"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: textile-nexus-fe
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: textile-nexus-fe/package-lock.json
+      - run: npm ci
+      - name: Lint (advisory while prototype lint debt is tracked)
+        run: npm run lint
+        continue-on-error: true
+      - name: Production build
+        run: npm run build
