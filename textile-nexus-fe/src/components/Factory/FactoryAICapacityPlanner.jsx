@@ -192,7 +192,7 @@ export default function FactoryAICapacityPlanner({ onNavigate }) {
                                                 dataKey="value"
                                                 stroke="none"
                                             >
-                                                {machineData.map((entry) => (
+                                                {machineData.map((_, index) => (
                                                     <Cell key={`cell-${index}`} fill={machineColors[index]} />
                                                 ))}
                                             </Pie>
