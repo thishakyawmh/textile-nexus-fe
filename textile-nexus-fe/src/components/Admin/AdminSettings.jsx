@@ -228,7 +228,7 @@ export default function AdminSettings({ onNavigate }) {
                                     <div className="relative">
                                         <input
                                             type={showCurrentPw ? "text" : "password"}
-                                            value="password12345" // For demo purposes, keep static or use a state if changing
+                                            placeholder="Enter current password"
                                             readOnly
                                             className="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 rounded-xl text-sm font-medium text-neutral-700 dark:text-white outline-none focus:border-black dark:focus:border-white transition-colors"
                                         />
