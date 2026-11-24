@@ -18,7 +18,6 @@ import {
     ResponsiveContainer
 } from 'recharts';
 import FactorySidebar from './FactorySidebar';
-import { cn } from '../../lib/utils';
 
 
 const GANTT_DATA = [
@@ -142,7 +141,7 @@ export default function FactoryAICapacityPlanner({ onNavigate }) {
 
                                     {/* Rows */}
                                     <div className="relative z-10 space-y-8 py-4">
-                                        {GANTT_DATA.map((row, index) => (
+                                        {GANTT_DATA.map((row) => (
                                             <div key={index} className="relative h-10 flex items-center">
                                                 {/* Y-Axis Label */}
                                                 <div className="absolute -left-[180px] w-[160px] text-right text-sm font-medium text-neutral-700 dark:text-neutral-300">
@@ -193,7 +192,7 @@ export default function FactoryAICapacityPlanner({ onNavigate }) {
                                                 dataKey="value"
                                                 stroke="none"
                                             >
-                                                {machineData.map((entry, index) => (
+                                                {machineData.map((entry) => (
                                                     <Cell key={`cell-${index}`} fill={machineColors[index]} />
                                                 ))}
                                             </Pie>
