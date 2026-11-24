@@ -26,6 +26,7 @@ import {
     Pie,
     Cell
 } from 'recharts';
+import { cn } from '../../lib/utils';
 import SupplierSidebar from './SupplierSidebar';
 import { useTheme } from '../../context/ThemeContext';
 
