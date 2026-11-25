@@ -181,7 +181,7 @@ export default function FactoryFabricStock({ onNavigate }) {
                                     </tr>
                                 </thead>
                                 <tbody className="text-sm font-medium text-neutral-600 dark:text-neutral-400 align-middle">
-                                    {FABRIC_STOCK_DATA.map((item, index) => (
+                                    {FABRIC_STOCK_DATA.map((item) => (
                                         <tr key={item.id} className="border-b border-neutral-50 dark:border-white/10 last:border-none hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors">
                                             <td className="px-8 py-4">
                                                 <div className="w-12 h-12 rounded-lg bg-neutral-100 dark:bg-neutral-800 overflow-hidden">
