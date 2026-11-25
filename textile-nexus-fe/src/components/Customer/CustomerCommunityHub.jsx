@@ -22,7 +22,6 @@ import {
     Folder
 } from 'lucide-react';
 import CustomerSidebar from './CustomerSidebar';
-import { useTheme } from '../../context/ThemeContext';
 
 const MOCK_CHATS = [
     { id: 1, name: 'Fabric Deals', time: '4:27pm', preview: 'Update: Fabric choice for Indigo Denim? Looking for ethical source.', avatar: 'https://placehold.co/100/1e3a8a/ffffff?text=FD', unread: true },
@@ -91,8 +90,6 @@ const MOCK_CREATIONS = [
 ];
 
 export default function CustomerCommunityHub({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('Groups'); // Groups | AI Chat
     const [messageInput, setMessageInput] = useState('');
