@@ -7,11 +7,8 @@ import {
     Camera
 } from 'lucide-react';
 import CustomerSidebar from './CustomerSidebar';
-import { useTheme } from '../../context/ThemeContext';
 
 export default function CustomerSettings({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     // Mock initial data
