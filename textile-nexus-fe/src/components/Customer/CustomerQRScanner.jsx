@@ -96,7 +96,7 @@ export default function CustomerQRScanner({ onNavigate }) {
                     </div>
 
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
-                        {SCANNED_ITEMS.map((item, index) => (
+                        {SCANNED_ITEMS.map((item) => (
                             <div key={item.id} className="flex flex-col items-center group">
                                 {/* Image Area - Floating above */}
                                 <div className="w-[280px] h-[340px] mb-[-4rem] z-10 relative transition-transform duration-300 group-hover:-translate-y-2">
