@@ -8,8 +8,16 @@ export default function Login({ onNavigate, onLogin }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const demoAuthEnabled =
+        import.meta.env.DEV && import.meta.env.VITE_ENABLE_DEMO_AUTH === 'true';
+
     const handleLogin = () => {
-        // Credential Helper Map
+        if (!demoAuthEnabled) {
+            toast.error('Authentication is not connected. This is a frontend prototype.');
+            return;
+        }
+
+        // Local demo credentials are enabled only in explicit development mode.
         const credentials = {
             'customer@textilenexus.com': { pass: 'customer123', role: 'Customer' },
             'tailor@textilenexus.com': { pass: 'tailor123', role: 'Tailor' },
@@ -24,7 +32,6 @@ export default function Login({ onNavigate, onLogin }) {
         if (user && user.pass === password) {
             localStorage.setItem('userRole', user.role);
             localStorage.setItem('isLoggedIn', 'true');
-            // toast.success(`Welcome back, ${user.role}!`);
             onLogin && onLogin();
         } else {
             toast.error('Invalid email or password');
@@ -36,6 +43,9 @@ export default function Login({ onNavigate, onLogin }) {
             <div className="bg-white dark:bg-white/5 dark:backdrop-blur-xl dark:border dark:border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl animate-fade-in-up transition-colors">
                 <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-1 sm:mb-2">Login</h2>
                 <p className="text-neutral-500 dark:text-neutral-400 mb-6 sm:mb-8 text-xs sm:text-sm">Login to access your Textile Nexus account</p>
+                <p role="note" className="text-xs text-amber-700 bg-amber-50 dark:bg-amber-500/10 dark:text-amber-300 rounded-lg px-3 py-2 mb-5">
+                    Prototype demo only: sign-in uses hardcoded sample accounts in this frontend. Do not use real passwords or deploy this as a production authentication system.
+                </p>
 
                 <div className="space-y-5">
                     <FloatingLabelInput

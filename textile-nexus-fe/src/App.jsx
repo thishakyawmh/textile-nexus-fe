@@ -93,6 +93,8 @@ function useAppNavigate() {
 
   const handleNavigate = (path) => {
     if (path === 'logout') {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('userRole');
       toast.success("Signed out successfully");
       navigate('/login');
       return;
@@ -252,6 +254,14 @@ function useAppNavigate() {
   };
 
   const handleLogin = () => {
+    const demoAuthEnabled =
+      import.meta.env.DEV && import.meta.env.VITE_ENABLE_DEMO_AUTH === 'true';
+    if (!demoAuthEnabled || localStorage.getItem('isLoggedIn') !== 'true') {
+      toast.error('Demo authentication is disabled.');
+      navigate('/login');
+      return;
+    }
+
     const role = localStorage.getItem('userRole');
     const roleRoutes = {
       'Factory': '/factory/dashboard',
@@ -276,6 +286,24 @@ function WithNavigation({ Component }) {
   return <Component onNavigate={handleNavigate} onLogin={handleLogin} />;
 }
 
+function ProtectedRoute({ Component, requiredRole }) {
+  const demoAuthEnabled =
+    import.meta.env.DEV && import.meta.env.VITE_ENABLE_DEMO_AUTH === 'true';
+
+  if (!demoAuthEnabled) {
+    return <Navigate to="/login" replace />;
+  }
+
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const currentRole = localStorage.getItem('userRole');
+
+  if (!isLoggedIn || !currentRole || currentRole !== requiredRole) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return <WithNavigation Component={Component} />;
+}
+
 export default function App() {
   return (
     <>
@@ -291,67 +319,67 @@ export default function App() {
         <Route path="/profile-creation" element={<WithNavigation Component={ProfileCreation} />} />
 
         {/* Admin Routes */}
-        <Route path="/admin/dashboard" element={<WithNavigation Component={AdminDashboard} />} />
-        <Route path="/admin/leaderboard" element={<WithNavigation Component={AdminLeaderboard} />} />
-        <Route path="/admin/user-controls" element={<WithNavigation Component={AdminUserControls} />} />
-        <Route path="/admin/sales-report" element={<WithNavigation Component={AdminSalesReport} />} />
-        <Route path="/admin/settings" element={<WithNavigation Component={AdminSettings} />} />
+        <Route path="/admin/dashboard" element={<ProtectedRoute requiredRole="Admin" Component={AdminDashboard} />} />
+        <Route path="/admin/leaderboard" element={<ProtectedRoute requiredRole="Admin" Component={AdminLeaderboard} />} />
+        <Route path="/admin/user-controls" element={<ProtectedRoute requiredRole="Admin" Component={AdminUserControls} />} />
+        <Route path="/admin/sales-report" element={<ProtectedRoute requiredRole="Admin" Component={AdminSalesReport} />} />
+        <Route path="/admin/settings" element={<ProtectedRoute requiredRole="Admin" Component={AdminSettings} />} />
 
         {/* Supplier Routes */}
-        <Route path="/supplier/dashboard" element={<WithNavigation Component={SupplierDashboard} />} />
-        <Route path="/supplier/orders" element={<WithNavigation Component={SupplierOrders} />} />
-        <Route path="/supplier/products" element={<WithNavigation Component={SupplierFabricMarket} />} />
-        <Route path="/supplier/messages" element={<WithNavigation Component={SupplierMessages} />} />
-        <Route path="/supplier/settings" element={<WithNavigation Component={SupplierSettings} />} />
-        <Route path="/supplier/profile-review" element={<SupplierProfileReview />} />
+        <Route path="/supplier/dashboard" element={<ProtectedRoute requiredRole="Fabric Supplier" Component={SupplierDashboard} />} />
+        <Route path="/supplier/orders" element={<ProtectedRoute requiredRole="Fabric Supplier" Component={SupplierOrders} />} />
+        <Route path="/supplier/products" element={<ProtectedRoute requiredRole="Fabric Supplier" Component={SupplierFabricMarket} />} />
+        <Route path="/supplier/messages" element={<ProtectedRoute requiredRole="Fabric Supplier" Component={SupplierMessages} />} />
+        <Route path="/supplier/settings" element={<ProtectedRoute requiredRole="Fabric Supplier" Component={SupplierSettings} />} />
+        <Route path="/supplier/profile-review" element={<ProtectedRoute requiredRole="Fabric Supplier" Component={SupplierProfileReview} />} />
 
         {/* Factory Routes */}
-        <Route path="/factory/dashboard" element={<WithNavigation Component={FactoryDashboard} />} />
-        <Route path="/factory/qr-generator" element={<WithNavigation Component={FactoryQRGenerator} />} />
-        <Route path="/factory/orders" element={<WithNavigation Component={FactoryOrders} />} />
-        <Route path="/factory/fabric-stock" element={<WithNavigation Component={FactoryFabricStock} />} />
-        <Route path="/factory/messages" element={<WithNavigation Component={FactoryMessages} />} />
-        <Route path="/factory/settings" element={<WithNavigation Component={FactorySettings} />} />
-        <Route path="/factory/design-explore" element={<WithNavigation Component={FactoryDesignExplore} />} />
-        <Route path="/factory/ai-capacity" element={<WithNavigation Component={FactoryAICapacityPlanner} />} />
+        <Route path="/factory/dashboard" element={<ProtectedRoute requiredRole="Factory" Component={FactoryDashboard} />} />
+        <Route path="/factory/qr-generator" element={<ProtectedRoute requiredRole="Factory" Component={FactoryQRGenerator} />} />
+        <Route path="/factory/orders" element={<ProtectedRoute requiredRole="Factory" Component={FactoryOrders} />} />
+        <Route path="/factory/fabric-stock" element={<ProtectedRoute requiredRole="Factory" Component={FactoryFabricStock} />} />
+        <Route path="/factory/messages" element={<ProtectedRoute requiredRole="Factory" Component={FactoryMessages} />} />
+        <Route path="/factory/settings" element={<ProtectedRoute requiredRole="Factory" Component={FactorySettings} />} />
+        <Route path="/factory/design-explore" element={<ProtectedRoute requiredRole="Factory" Component={FactoryDesignExplore} />} />
+        <Route path="/factory/ai-capacity" element={<ProtectedRoute requiredRole="Factory" Component={FactoryAICapacityPlanner} />} />
 
         {/* Designer Routes */}
-        <Route path="/designer/dashboard" element={<WithNavigation Component={DesignerDashboard} />} />
-        <Route path="/designer/community-hub" element={<WithNavigation Component={DesignerCommunityHub} />} />
-        <Route path="/designer/orders" element={<WithNavigation Component={DesignerOrders} />} />
-        <Route path="/designer/products" element={<WithNavigation Component={DesignerProducts} />} />
-        <Route path="/designer/product-upload" element={<WithNavigation Component={DesignerProductUpload} />} />
-        <Route path="/designer/profile" element={<WithNavigation Component={DesignerProfile} />} />
-        <Route path="/designer/messages" element={<WithNavigation Component={DesignerMessages} />} />
-        <Route path="/designer/settings" element={<WithNavigation Component={DesignerSettings} />} />
+        <Route path="/designer/dashboard" element={<ProtectedRoute requiredRole="Designer" Component={DesignerDashboard} />} />
+        <Route path="/designer/community-hub" element={<ProtectedRoute requiredRole="Designer" Component={DesignerCommunityHub} />} />
+        <Route path="/designer/orders" element={<ProtectedRoute requiredRole="Designer" Component={DesignerOrders} />} />
+        <Route path="/designer/products" element={<ProtectedRoute requiredRole="Designer" Component={DesignerProducts} />} />
+        <Route path="/designer/product-upload" element={<ProtectedRoute requiredRole="Designer" Component={DesignerProductUpload} />} />
+        <Route path="/designer/profile" element={<ProtectedRoute requiredRole="Designer" Component={DesignerProfile} />} />
+        <Route path="/designer/messages" element={<ProtectedRoute requiredRole="Designer" Component={DesignerMessages} />} />
+        <Route path="/designer/settings" element={<ProtectedRoute requiredRole="Designer" Component={DesignerSettings} />} />
 
         {/* Tailor Routes */}
-        <Route path="/tailor/dashboard" element={<WithNavigation Component={TailorDashboard} />} />
-        <Route path="/tailor/community-hub" element={<WithNavigation Component={TailorCommunityHub} />} />
-        <Route path="/tailor/orders" element={<WithNavigation Component={TailorOrders} />} />
-        <Route path="/tailor/fabric-market" element={<WithNavigation Component={TailorFabricMarket} />} />
-        <Route path="/tailor/ai-measurements" element={<WithNavigation Component={TailorAIMeasurements} />} />
-        <Route path="/tailor/messages" element={<WithNavigation Component={TailorMessages} />} />
-        <Route path="/tailor/settings" element={<WithNavigation Component={TailorSettings} />} />
+        <Route path="/tailor/dashboard" element={<ProtectedRoute requiredRole="Tailor" Component={TailorDashboard} />} />
+        <Route path="/tailor/community-hub" element={<ProtectedRoute requiredRole="Tailor" Component={TailorCommunityHub} />} />
+        <Route path="/tailor/orders" element={<ProtectedRoute requiredRole="Tailor" Component={TailorOrders} />} />
+        <Route path="/tailor/fabric-market" element={<ProtectedRoute requiredRole="Tailor" Component={TailorFabricMarket} />} />
+        <Route path="/tailor/ai-measurements" element={<ProtectedRoute requiredRole="Tailor" Component={TailorAIMeasurements} />} />
+        <Route path="/tailor/messages" element={<ProtectedRoute requiredRole="Tailor" Component={TailorMessages} />} />
+        <Route path="/tailor/settings" element={<ProtectedRoute requiredRole="Tailor" Component={TailorSettings} />} />
 
         {/* Customer Routes */}
-        <Route path="/customer/designer-explore" element={<WithNavigation Component={CustomerDesignerExplore} />} />
-        <Route path="/customer/designer-profile" element={<WithNavigation Component={CustomerDesignerProfile} />} />
-        <Route path="/customer/tailor-profile" element={<WithNavigation Component={CustomerTailorProfile} />} />
-        <Route path="/customer/qr-scanner" element={<WithNavigation Component={CustomerQRScanner} />} />
-        <Route path="/customer/matching-selection" element={<WithNavigation Component={CustomerMatchingSelection} />} />
-        <Route path="/customer/outfit-view" element={<WithNavigation Component={CustomerOutfitView} />} />
-        <Route path="/customer/my-tailor" element={<WithNavigation Component={CustomerMyTailor} />} />
-        <Route path="/customer/choose-tailor" element={<WithNavigation Component={CustomerChooseTailor} />} />
-        <Route path="/customer/choose-design" element={<WithNavigation Component={CustomerChooseDesign} />} />
-        <Route path="/customer/upload-design" element={<WithNavigation Component={CustomerUploadDesign} />} />
-        <Route path="/customer/upload-measurement" element={<WithNavigation Component={CustomerUploadMeasurement} />} />
-        <Route path="/customer/order-details" element={<WithNavigation Component={CustomerOrderDetails} />} />
-        <Route path="/customer/payment" element={<WithNavigation Component={CustomerPayment} />} />
-        <Route path="/customer/order-tracking" element={<WithNavigation Component={CustomerOrderTracking} />} />
-        <Route path="/customer/community-hub" element={<WithNavigation Component={CustomerCommunityHub} />} />
-        <Route path="/customer/settings" element={<WithNavigation Component={CustomerSettings} />} />
-        <Route path="/customer/3d-view" element={<WithNavigation Component={Customer3DView} />} />
+        <Route path="/customer/designer-explore" element={<ProtectedRoute requiredRole="Customer" Component={CustomerDesignerExplore} />} />
+        <Route path="/customer/designer-profile" element={<ProtectedRoute requiredRole="Customer" Component={CustomerDesignerProfile} />} />
+        <Route path="/customer/tailor-profile" element={<ProtectedRoute requiredRole="Customer" Component={CustomerTailorProfile} />} />
+        <Route path="/customer/qr-scanner" element={<ProtectedRoute requiredRole="Customer" Component={CustomerQRScanner} />} />
+        <Route path="/customer/matching-selection" element={<ProtectedRoute requiredRole="Customer" Component={CustomerMatchingSelection} />} />
+        <Route path="/customer/outfit-view" element={<ProtectedRoute requiredRole="Customer" Component={CustomerOutfitView} />} />
+        <Route path="/customer/my-tailor" element={<ProtectedRoute requiredRole="Customer" Component={CustomerMyTailor} />} />
+        <Route path="/customer/choose-tailor" element={<ProtectedRoute requiredRole="Customer" Component={CustomerChooseTailor} />} />
+        <Route path="/customer/choose-design" element={<ProtectedRoute requiredRole="Customer" Component={CustomerChooseDesign} />} />
+        <Route path="/customer/upload-design" element={<ProtectedRoute requiredRole="Customer" Component={CustomerUploadDesign} />} />
+        <Route path="/customer/upload-measurement" element={<ProtectedRoute requiredRole="Customer" Component={CustomerUploadMeasurement} />} />
+        <Route path="/customer/order-details" element={<ProtectedRoute requiredRole="Customer" Component={CustomerOrderDetails} />} />
+        <Route path="/customer/payment" element={<ProtectedRoute requiredRole="Customer" Component={CustomerPayment} />} />
+        <Route path="/customer/order-tracking" element={<ProtectedRoute requiredRole="Customer" Component={CustomerOrderTracking} />} />
+        <Route path="/customer/community-hub" element={<ProtectedRoute requiredRole="Customer" Component={CustomerCommunityHub} />} />
+        <Route path="/customer/settings" element={<ProtectedRoute requiredRole="Customer" Component={CustomerSettings} />} />
+        <Route path="/customer/3d-view" element={<ProtectedRoute requiredRole="Customer" Component={Customer3DView} />} />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/login" replace />} />

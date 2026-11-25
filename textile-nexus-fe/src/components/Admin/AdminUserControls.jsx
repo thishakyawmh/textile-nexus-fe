@@ -9,9 +9,7 @@ import {
     ChevronLeft,
     ChevronRight
 } from 'lucide-react';
-import { cn } from '../../lib/utils';
 import AdminSidebar from './AdminSidebar';
-import { useTheme } from '../../context/ThemeContext';
 
 // --- Mock Data ---
 
@@ -30,8 +28,6 @@ const USER_REQUESTS = [
 const ITEMS_PER_PAGE = 7;
 
 export default function AdminUserControls({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState('All'); // All, Pending, Accepted, Rejected

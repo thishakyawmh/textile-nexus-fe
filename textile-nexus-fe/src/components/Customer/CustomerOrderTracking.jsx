@@ -7,11 +7,8 @@ import {
     Check
 } from 'lucide-react';
 import CustomerSidebar from './CustomerSidebar';
-import { useTheme } from '../../context/ThemeContext';
 
 export default function CustomerOrderTracking({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     // Hardcoded steps based on image
@@ -120,7 +117,6 @@ export default function CustomerOrderTracking({ onNavigate }) {
                                 {/* Steps */}
                                 {steps.map((step, index) => {
                                     const isActive = index <= currentStep;
-                                    const isCurrent = index === currentStep;
 
                                     return (
                                         <div key={step} className="flex flex-col items-center gap-2 bg-white dark:bg-black px-2 transition-colors">

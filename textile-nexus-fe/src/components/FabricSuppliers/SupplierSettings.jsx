@@ -6,7 +6,6 @@ import {
     Menu,
     Camera
 } from 'lucide-react';
-import { cn } from '../../lib/utils';
 import SupplierSidebar from './SupplierSidebar';
 
 export default function SupplierSettings({ onNavigate }) {

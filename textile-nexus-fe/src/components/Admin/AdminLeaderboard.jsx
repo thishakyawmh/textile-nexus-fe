@@ -19,7 +19,6 @@ import {
     Cell,
     Legend
 } from 'recharts';
-import { cn } from '../../lib/utils';
 import AdminSidebar from './AdminSidebar';
 import { useTheme } from '../../context/ThemeContext';
 
@@ -90,7 +89,7 @@ export default function AdminLeaderboard({ onNavigate }) {
     const { theme } = useTheme();
     const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [selectedPeriod, setSelectedPeriod] = useState('October');
+    const [selectedPeriod] = useState('October');
 
     return (
         <div className="min-h-screen bg-[#F8F9FE] dark:bg-black flex font-sans text-neutral-900 dark:text-white transition-colors duration-300">

@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import TailorSidebar from './TailorSidebar';
 import { cn } from '../../lib/utils';
-import { useTheme } from '../../context/ThemeContext';
 
 const STATS = [
     { label: 'Total Orders This Month', value: '128', icon: <img src="" alt="img" className="w-5" />, isTrend: true },
@@ -138,8 +137,6 @@ const OrderStatusPopover = ({ onClose }) => (
 );
 
 export default function TailorOrders({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [showCalendar, setShowCalendar] = useState(false);
     const [showGarmentType, setShowGarmentType] = useState(false);
