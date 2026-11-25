@@ -7,11 +7,8 @@ import {
     Camera
 } from 'lucide-react';
 import TailorSidebar from './TailorSidebar';
-import { useTheme } from '../../context/ThemeContext';
 
 export default function TailorSettings({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
