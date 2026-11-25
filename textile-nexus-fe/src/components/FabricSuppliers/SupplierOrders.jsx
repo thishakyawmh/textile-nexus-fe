@@ -49,7 +49,7 @@ export default function SupplierOrders({ onNavigate }) {
     const [selectedStatus, setSelectedStatus] = useState([]);
 
     // Calendar State
-    const [calMonth, setCalMonth] = useState('February 2025');
+    const [calMonth] = useState('February 2025');
     // Simple calendar grid for Feb 2025 (Starts Saturday)
     const calendarDays = [
         { day: '', id: 'empty1' }, { day: '', id: 'empty2' }, { day: '', id: 'empty3' }, { day: '', id: 'empty4' }, { day: '', id: 'empty5' }, { day: '', id: 'empty6' },
@@ -330,7 +330,7 @@ export default function SupplierOrders({ onNavigate }) {
                                     </tr>
                                 </thead>
                                 <tbody className="text-xs font-medium text-neutral-600 dark:text-neutral-400">
-                                    {MOCK_ORDERS.map((order, index) => (
+                                    {MOCK_ORDERS.map((order) => (
                                         <tr key={order.id} className="border-b border-neutral-50 dark:border-white/10 last:border-none hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors">
                                             <td className="px-8 py-6 text-neutral-900 dark:text-white font-bold">{order.id}</td>
                                             <td className="px-8 py-6 text-neutral-700 dark:text-neutral-300">{order.supplier}</td>
