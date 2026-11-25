@@ -18,7 +18,6 @@ import {
     ResponsiveContainer
 } from 'recharts';
 import FactorySidebar from './FactorySidebar';
-import { cn } from '../../lib/utils';
 
 
 const GANTT_DATA = [
@@ -193,7 +192,7 @@ export default function FactoryAICapacityPlanner({ onNavigate }) {
                                                 dataKey="value"
                                                 stroke="none"
                                             >
-                                                {machineData.map((entry, index) => (
+                                                {machineData.map((_, index) => (
                                                     <Cell key={`cell-${index}`} fill={machineColors[index]} />
                                                 ))}
                                             </Pie>
