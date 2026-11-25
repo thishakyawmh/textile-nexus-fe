@@ -7,9 +7,7 @@ import {
     Printer,
     Send
 } from 'lucide-react';
-import { cn } from '../../lib/utils';
 import AdminSidebar from './AdminSidebar';
-import { useTheme } from '../../context/ThemeContext';
 
 // --- Mock Data ---
 
@@ -21,8 +19,6 @@ const INVOICE_ITEMS = [
 ];
 
 export default function AdminSalesReport({ onNavigate }) {
-    const { theme } = useTheme();
-    const isDark = theme === 'dark';
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [items, setItems] = useState(INVOICE_ITEMS);
     const [searchQuery, setSearchQuery] = useState('');
